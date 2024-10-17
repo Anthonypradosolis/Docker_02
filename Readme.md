@@ -16,6 +16,13 @@ DOCKER 2
 
     2. Crea un contenedor con el nombre 'dam_web1'.
 
+        sudo docker run --name dam_web1 httpd:2.4
+
+        Con este comando creamos un contenedor con el nombre dam_web1.
+
+        sudo docker ps -a
+
+        Con este comando comprobamos que el contenedor está creado.
 
     3. Si quieres poder acceder desde el navegador de tu equipo, ¿que debes hacer?
         Utiliza bind mount para que el directorio del apache2 'htdocs' esté montado un directorio que tu elijas.

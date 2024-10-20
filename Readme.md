@@ -88,3 +88,17 @@ Accede desde el navegador:
 
 <div style="text-align: center;">
 
+## 5. Crea otro contenedor 'dam_web2' con el mismo bind mount y en otro puerto
+
+</div>
+
+Crea un segundo contenedor llamado `dam_web2` en el puerto 9080:
+
+**`docker run -d --name dam_web2 -p 9080:80 -v /home/accesodatos/SXE/Html:/usr/local/apache2/htdocs httpd:2.4`**
+
+Este comando crea un contenedor `dam_web2` con el puerto 9080 mapeado al puerto 80 del contenedor, utilizando el mismo bind mount.
+
+<br>
+
+<div style="text-align: center;">
+

@@ -71,3 +71,20 @@ Este comando crea un contenedor `dam_web1` con el puerto 8080 mapeado al puerto 
 <br>
 
 <div style="text-align: center;">
+
+## 4. Realiza un 'hola mundo' en HTML y comprueba que accedes desde el navegador
+
+</div>
+
+Crea un archivo `index.html` con el contenido "Hola mundo":
+
+**`echo "<html><body><h1>Hola mundo</h1></body></html>" > /home/accesodatos/SXE/Html/index.html`**
+
+Accede desde el navegador:
+
+**`http://localhost:8080`**
+
+<br>
+
+<div style="text-align: center;">
+

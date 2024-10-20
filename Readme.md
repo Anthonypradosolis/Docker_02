@@ -118,3 +118,8 @@ Ambos servidores deben servir la misma página.
 
 <div style="text-align: center;">
 
+## 7. Realiza modificaciones y comprueba que los dos servidores sirven la misma página
+
+</div>
+
+Realiza modificaciones en el archivo HTML y vuelve a acceder a los dos enlaces anteriores para verificar que ambos servidores sirven la página actualizada.

@@ -1,42 +1,73 @@
-DOCKER 2
+<div style="text-align: center;">
 
-    1.Descarga la imagen 'httpd' y comprueba que está en tu equipo.
+# DOCKER 2
 
-        sudo docker pull httpd:2.4
+</div>
 
-        Con este comando descargamos la imagen de apache con el tag 2.4.
+<br>
 
-        sudo docker run httpd:2.4
+<div style="text-align: center;">
 
-        Con este comando iniciamos la imagen de apache con el tag 2.4.
+## 1. Descarga la imagen 'httpd' y comprueba que está en tu equipo
 
-        sudo docker ps -a
+</div>
 
-        Con este comando comprobamos que el contenedor está creado.
+**`sudo docker pull httpd:2.4`**
 
-    2. Crea un contenedor con el nombre 'dam_web1'.
+Con este comando descargamos la imagen de Apache con el tag 2.4.
 
-        sudo docker run --name dam_web1 httpd:2.4
+**`sudo docker run httpd:2.4`**
 
-        Con este comando creamos un contenedor con el nombre dam_web1.
+Con este comando iniciamos la imagen de Apache con el tag 2.4.
 
-        sudo docker ps -a
+**`sudo docker ps -a`**
 
-        Con este comando comprobamos que el contenedor está creado.
+Con este comando comprobamos que el contenedor está creado.
 
-    3. Si quieres poder acceder desde el navegador de tu equipo, ¿que debes hacer?
-        Utiliza bind mount para que el directorio del apache2 'htdocs' esté montado un directorio que tu elijas.
-    
+<br>
 
-    4. Realiza un 'hola mundo' en html y comprueba que accedes desde el navegador.
+<div style="text-align: center;">
 
+## 2. Crea un contenedor con el nombre 'dam_web1'
 
-    5. Crea otro contenedor 'dam_web2' con el mismo bind mount y a otro puerto, por ejemplo 9080.
+</div>
 
+**`sudo docker run --name dam_web1 httpd:2.4`**
 
-    6. Comprueba que los dos servidores 'sirven' la misma página, es decir, cuando consultamos en el navegador:
-        http://localhost:9080 
-        http://localhost:8000
+Con este comando creamos un contenedor con el nombre `dam_web1`.
 
+**`sudo docker ps -a`**
 
-    7. Realiza modificaciones de la página y comprueba que los dos servidores 'sirven' la misma página
+Con este comando comprobamos que el contenedor está creado.
+
+<br>
+
+<div style="text-align: center;">
+
+## 3. ¿Cómo acceder desde el navegador de tu equipo?
+
+</div>
+
+Utiliza **bind mount** para montar el directorio `htdocs` de Apache en un directorio que elijas.
+
+Primero, detén el contenedor:
+
+**`docker stop dam_web1`**
+
+Este comando detiene el contenedor `dam_web1`.
+
+Elimina el contenedor:
+
+**`docker rm dam_web1`**
+
+Este comando elimina el contenedor `dam_web1`.
+
+Ahora, crea un nuevo contenedor con el puerto mapeado y el bind mount:
+
+**`docker run -d --name dam_web1 -p 8080:80 -v /home/accesodatos/SXE/Html:/usr/local/apache2/htdocs httpd:2.4`**
+
+Este comando crea un contenedor `dam_web1` con el puerto 8080 mapeado al puerto 80 del contenedor, y el directorio `/home/accesodatos/SXE/Html` mapeado a `/usr/local/apache2/htdocs` en el contenedor.
+
+<br>
+
+<div style="text-align: center;">

@@ -102,3 +102,19 @@ Este comando crea un contenedor `dam_web2` con el puerto 9080 mapeado al puerto 
 
 <div style="text-align: center;">
 
+## 6. Comprueba que los dos servidores sirven la misma página
+
+</div>
+
+Accede a los dos servidores para comprobar que ambos muestran la misma página:
+
+**`http://localhost:8080`**
+
+**`http://localhost:9080`**
+
+Ambos servidores deben servir la misma página.
+
+<br>
+
+<div style="text-align: center;">
+
